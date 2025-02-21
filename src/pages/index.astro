@@ -1,8 +1,57 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Home from '../components/Home.astro'
+import Layout from "../layouts/Layout.astro";
+import Home from "../components/Home.astro";
 ---
 
 <Layout>
-	<Home />
+  <main id="parent">
+    <div class="div1">
+      <span>
+				aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+			</span>
+    </div>
+    <div class="div2">
+      <span>
+				aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+			</span>
+    </div>
+    <div class="div3">
+      <span>
+				aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+			</span>
+    </div>
+  </main>
 </Layout>
+
+<style>
+  #parent {
+		margin-top: 7.5rem;
+		margin-right: 15%;
+		margin-left: 15%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 0.75rem;
+  }
+  div {
+		color: #e3e3e3;
+    background-color: #4c4e51;
+    border-radius: 1rem;
+  }
+	span {
+		width: inherit;
+		height: inherit;
+		margin: 1rem;
+		word-break: break-word;
+	}
+  .div1 {
+    grid-area: 1 / 1 / 3 / 6;
+  }
+  .div2 {
+    grid-area: 3 / 1 / 6 / 4;
+  }
+  .div3 {
+    grid-area: 3 / 4 / 6 / 6;
+  }
+</style>
