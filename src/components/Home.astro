@@ -1,42 +1,39 @@
-
 <main id="parent">
-  <div class="div1">
-    <span>
-      <h1 class="eng">About me</h1>
-      愛知県に住む情報系大学生。<br>
-    </span>
+  <div class="block div1">
+    <div class="container">
+      <h1 class="title">About me</h1>
+      <div class="text">
+        愛知県に住む情報系大学生。<br />
+      </div>
+    </div>
   </div>
-  <div class="div2">
-    <span> aaaaaaaaaaaaaaaaaaaaaaaaaaaa </span>
+  <div class="block div2">
+    <div class="container"> 
+      <h1 class="title">Products</h1></div>
   </div>
-  <div class="div3">
-    <span> aaaaaaaaaaaaaaaaaaaaaaaaaaaa </span>
+  <div class="block div3">
+    <div class="container">
+      <h1 class="title">Skills</h1>
+    </div>
   </div>
 </main>
 
 <style>
   #parent {
-		margin-top: 7.5rem;
-		margin-right: 15%;
-		margin-left: 15%;
+    margin-top: 7.5rem;
+    margin-right: 15%;
+    margin-left: 15%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0.75rem;
     grid-row-gap: 0.75rem;
   }
-  div {
-		color: #e3e3e3;
-    background-color: #4c4e51;
-    border-radius: 1rem;
-		padding: 1.5rem;
+  .block {
+    color: #e3e3e3;
+    background-color: #4c4e5180;
+    padding: 1.5rem;
   }
-	span {
-		position: relative;
-		width: inherit;
-		height: inherit;
-		word-break: break-word;
-	}
   .div1 {
     grid-area: 1 / 1 / 3 / 6;
   }
@@ -45,5 +42,21 @@
   }
   .div3 {
     grid-area: 3 / 4 / 6 / 6;
+  }
+  .container {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    word-break: break-word;
+    font-size: 1.5rem;
+  }
+  .title {
+    font-size: 3rem;
+    margin-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .text {
+    margin-left: 2rem;
   }
 </style>
