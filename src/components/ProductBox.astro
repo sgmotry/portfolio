@@ -1,12 +1,24 @@
+---
+const {title, description, role, stack, link} = Astro.props;
+---
 <div>
-  <slot />
+  {title} <br>
+  {description} <br>
+  {role}
+  {stack}
+  <a href={link} target="_blank">リンク</a>
 </div>
 
 <style>
   div {
-    background-color: white;
+    background-color: transparent;
+    border: thin solid;
+    border-color: #e3e3e3;
+    border-top: none;
+    border-left: none;
     width: 90%;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 1rem;
   }
 </style>
