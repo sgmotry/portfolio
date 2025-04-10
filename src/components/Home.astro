@@ -1,42 +1,63 @@
-<div id="container">
-  <h1>About Me</h1>
-  ここに自己紹介を書く予定
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <h6>どういうデザインにするか迷走中です。</h6>
-</div>
+<main id="parent">
+  <div class="block div1">
+    <div class="container">
+      <h1 class="title">About me</h1>
+      <div class="text">
+        愛知県に住む情報系大学生。<br />
+      </div>
+    </div>
+  </div>
+  <div class="block div2">
+    <div class="container">
+      <h1 class="title">Products</h1>
+    </div>
+  </div>
+  <div class="block div3">
+    <div class="container">
+      <h1 class="title">Skills</h1>
+    </div>
+  </div>
+</main>
 
 <style>
-  #container {
-    margin-top: 8rem;
-    margin-left: 18%;
-    margin-right: 18%;
-    color: white;
-    font-size: 1.25rem;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
+  #parent {
+    margin-top: 7.5rem;
+    margin-right: 15%;
+    margin-left: 15%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 0.75rem;
   }
-  @media (max-width: 1350px) {
-    #container {
-      margin-left: 10%;
-      margin-right: 10%;
-    }
+  .block {
+    color: #e3e3e3;
+    background-color: #4c4e5180;
+    padding: 1.5rem;
   }
-  @media (max-width: 900px) {
-    #container {
-      margin-left: 5%;
-      margin-right: 5%;
-    }
+  .div1 {
+    grid-area: 1 / 1 / 3 / 6;
+  }
+  .div2 {
+    grid-area: 3 / 1 / 6 / 4;
+  }
+  .div3 {
+    grid-area: 3 / 4 / 6 / 6;
+  }
+  .container {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    word-break: break-word;
+    font-size: 1.5rem;
+  }
+  .title {
+    font-size: 3rem;
+    margin-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .text {
+    margin-left: 2rem;
   }
 </style>
