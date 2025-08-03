@@ -1,0 +1,22 @@
+---
+const {text, imageURL} = Astro.props;
+---
+
+<div>
+  <img width="40" height="40" src={imageURL} />
+  {text}
+</div>
+
+<style>
+  div {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
