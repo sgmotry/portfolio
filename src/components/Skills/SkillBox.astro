@@ -1,9 +1,11 @@
 ---
-const {text, imageURL} = Astro.props;
+const {text, svgRaw} = Astro.props;
 ---
 
 <div>
-  <img width="40" height="40" src={imageURL} />
+  <div class="wrapper">
+    <Fragment set:html={svgRaw} class="svg"/>
+  </div>
   {text}
 </div>
 
@@ -15,8 +17,15 @@ const {text, imageURL} = Astro.props;
     font-size: 1.25rem;
     text-align: center;
   }
-  img {
+  .wrapper {
+    width: 100px;
+    height: 60px;
+  }
+  .wrapper :global(svg) {
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 </style>

@@ -1,33 +1,48 @@
 ---
 import SkillBox from "./SkillBox.astro";
+
+import htmlIcon from "../../images/HTML.svg?raw";
+import cssIcon from "../../images/CSS.svg?raw";
+import jsIcon from "../../images/js.svg?raw";
+import tsIcon from "../../images/ts.svg?raw";
+import reactIcon from "../../images/react.svg?raw";
+import nextjsIcon from "../../images/nextjs.svg?raw";
+import astroIcon from "../../images/astro.svg?raw";
+import nodejsIcon from "../../images/nodejs.svg?raw";
+import pythonIcon from "../../images/python.svg?raw";
+import goIcon from "../../images/go.svg?raw";
+import cIcon from "../../images/clang.svg?raw";
+import javaIcon from "../../images/java.svg?raw";
+import dartIcon from "../../images/dart.svg?raw";
+import flutterIcon from "../../images/flutter.svg?raw";
+import githubIcon from "../../images/github.svg?raw";
 ---
 
 <div class="container">
   <h1 class="title">Skills</h1>
   <div class="description">
     <section>
-      <SkillBox text="HTML" imageURL="src/images/HTML.svg" />
-      <SkillBox text="CSS" imageURL="src/images/CSS.svg" />
-      <SkillBox text="JavaScript" imageURL="src/images/js.svg" />
-      <SkillBox text="TypeScript" imageURL="src/images/ts.svg" />
+      <SkillBox text="HTML" svgRaw={htmlIcon} />
+      <SkillBox text="CSS" svgRaw={cssIcon} />
+      <SkillBox text="JavaScript" svgRaw={jsIcon} />
+      <SkillBox text="TypeScript" svgRaw={tsIcon} />
     </section>
     <section>
-      <SkillBox text="React" imageURL="src/images/react.svg" />
-      <SkillBox text="Next.js" imageURL="src/images/nextjs.svg" />
-      <SkillBox text="Astro" imageURL="src/images/astro.svg" />
-      <SkillBox text="Node.js" imageURL="src/images/nodejs.svg" />
+      <SkillBox text="React" svgRaw={reactIcon} />
+      <SkillBox text="Next.js" svgRaw={nextjsIcon} />
+      <SkillBox text="Astro" svgRaw={astroIcon} />
+      <SkillBox text="Node.js" svgRaw={nodejsIcon} />
     </section>
     <section>
-      <SkillBox text="Python" imageURL="src/images/python.svg" />
-      <SkillBox text="Go" imageURL="src/images/go.svg" />
-      <SkillBox text="C" imageURL="src/images/clang.svg" />
-      <SkillBox text="Java" imageURL="src/images/java.svg" />
+      <SkillBox text="Python" svgRaw={pythonIcon} />
+      <SkillBox text="Go" svgRaw={goIcon} />
+      <SkillBox text="C" svgRaw={cIcon} />
+      <SkillBox text="Java" svgRaw={javaIcon} />
     </section>
     <section>
-      <SkillBox text="Dart" imageURL="src/images/dart.svg" />
-      <SkillBox text="Flutter" imageURL="src/images/flutter.svg" />
-      <SkillBox text="Git" imageURL="src/images/Git.svg" />
-      <SkillBox text="Github" imageURL="src/images/github.svg" />
+      <SkillBox text="Dart" svgRaw={dartIcon} />
+      <SkillBox text="Flutter" svgRaw={flutterIcon} />
+      <SkillBox text="Github" svgRaw={githubIcon} />
     </section>
   </div>
 </div>
