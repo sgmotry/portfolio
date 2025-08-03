@@ -1,0 +1,62 @@
+---
+import SkillBox from "./SkillBox.astro";
+
+import htmlIcon from "../../images/HTML.svg?raw";
+import cssIcon from "../../images/CSS.svg?raw";
+import jsIcon from "../../images/js.svg?raw";
+import tsIcon from "../../images/ts.svg?raw";
+import reactIcon from "../../images/react.svg?raw";
+import nextjsIcon from "../../images/nextjs.svg?raw";
+import astroIcon from "../../images/astro.svg?raw";
+import nodejsIcon from "../../images/nodejs.svg?raw";
+import pythonIcon from "../../images/python.svg?raw";
+import goIcon from "../../images/go.svg?raw";
+import cIcon from "../../images/clang.svg?raw";
+import javaIcon from "../../images/java.svg?raw";
+import dartIcon from "../../images/dart.svg?raw";
+import flutterIcon from "../../images/flutter.svg?raw";
+import githubIcon from "../../images/github.svg?raw";
+---
+
+<div class="container">
+  <h1 class="title">Skills</h1>
+  <div class="description">
+    <section>
+      <SkillBox text="HTML" svgRaw={htmlIcon} />
+      <SkillBox text="CSS" svgRaw={cssIcon} />
+      <SkillBox text="JavaScript" svgRaw={jsIcon} />
+      <SkillBox text="TypeScript" svgRaw={tsIcon} />
+    </section>
+    <section>
+      <SkillBox text="React" svgRaw={reactIcon} />
+      <SkillBox text="Next.js" svgRaw={nextjsIcon} />
+      <SkillBox text="Astro" svgRaw={astroIcon} />
+      <SkillBox text="Node.js" svgRaw={nodejsIcon} />
+    </section>
+    <section>
+      <SkillBox text="Python" svgRaw={pythonIcon} />
+      <SkillBox text="Go" svgRaw={goIcon} />
+      <SkillBox text="C" svgRaw={cIcon} />
+      <SkillBox text="Java" svgRaw={javaIcon} />
+    </section>
+    <section>
+      <SkillBox text="Dart" svgRaw={dartIcon} />
+      <SkillBox text="Flutter" svgRaw={flutterIcon} />
+      <SkillBox text="Github" svgRaw={githubIcon} />
+    </section>
+  </div>
+</div>
+
+<style>
+  section {
+    display: flex;
+    font-size: 1.5rem;
+    color: #e3e3e3;
+    margin-bottom: 1.5rem;
+  }
+  img {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.5rem;
+  }
+</style>
