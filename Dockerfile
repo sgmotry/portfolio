@@ -10,5 +10,3 @@ ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
 WORKDIR /app
-
-VOLUME ["/app/node_modules"]
