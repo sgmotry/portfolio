@@ -5,8 +5,8 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      # 「現在のディレクトリ」を「コンテナ内のパス」に同期させる
       - .:/app
+      - /app/node_modules
     working_dir: /app
     ports:
       - "4321:4321"
