@@ -5,8 +5,8 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - .:/app
-      - /app/node_modules
+      - .:/app # 現在のディレクトリの中身（.）を/appと同期する （送信元:送信先）
+      - /app/node_modules # 同期の対象外にするファイル（ホストのnode_modulesが空でもdocker内には存在できる）
     working_dir: /app
     ports:
       - "4321:4321"
