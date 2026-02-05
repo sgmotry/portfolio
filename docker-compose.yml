@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    command: sh -c "pnpm i && pnpm dev --host"
+    tty: true
+    stdin_open: true
+    volumes:
+      # 「現在のディレクトリ」を「コンテナ内のパス」に同期させる
+      - .:/app
+    working_dir: /app
+    ports:
+      - "4321:4321"
